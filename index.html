@@ -80,8 +80,10 @@
         <!--참석인원 파악 및 계좌번호-->
         <h1 style="text-align: center;">결혼식 참석인원 파악</h1>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc_dagNKS1GQs_ahyQejdVskZ3vYf9RicQ-KpqgHbikOjywvg/viewform?embedded=true" width="100%" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe>
-        <button type="button" id="btnmyaccount" style="width: 33%; background-color: gold; color: black; border-color: white;">신랑 계좌번호 복사</button><button type="button" id="btfatheraccount" style="width: 33%; background-color: gold; color: black; border-color: white;">신랑 아버지 계좌</button><button type="button" id="btnmotheraccount" style="width: 33%; background-color: gold; color: black; border-color: white;">신랑 어머니 계좌</button><br>
-        <textarea readonly id="myaccount" style="width: 32%; resize: none;">카카오뱅크 3333-26-3184097</textarea><textarea readonly id="fatheraccount" style="width: 32%; resize: none;">농협 858-12-117968</textarea><textarea readonly id="motheraccount" style="width: 32%; resize: none;">농협 858-12-117137</textarea>
+        <p><button type="button" id="btnmyaccount" style="background-color: gold; color: black; border-color: white; float: left;">신랑 계좌번호 복사</button><textarea readonly id="myaccount" style="resize: none; float: right;">카카오뱅크 3333-26-3184097</textarea></p><br>
+        <p><button type="button" id="btnfatheraccount" style="background-color: gold; color: black; border-color: white; float: left;">신랑 아버지 계좌</button><textarea readonly id="fatheraccount" style="resize: none; float: right;">농협 858-12-117968</textarea></p><br>
+        <p><button type="button" id="btnmotheraccount" style="background-color: gold; color: black; border-color: white; float: left;">신랑 어머니 계좌</button><textarea readonly id="motheraccount" style="resize: none; float: right;">농협 858-12-117137</textarea></p><br>
+        
 
     </body>
 
@@ -93,7 +95,7 @@
             document.execCommand('copy');
             textArea.setSelectionRange(0, 0);
         }
-        document.getElementById("btfatheraccount").onclick = function() {
+        document.getElementById("btnfatheraccount").onclick = function() {
             const textArea = document.getElementById("fatheraccount");
             textArea.select();
             textArea.setSelectionRange(0, 99999);
